@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        body
+        {     
+             font-family: "EB Garamond";
+        }
+               
+
+
+
+
+
+
+
+
+    </style>
+
+
+
+        <!-- BOOTSTRAP PROJECT  : -->
+
+
+    <div class="navbar flex justify-between items-center px-3 py-1 lg:px-15 lg: py-3 border-b-1 border-[#2A446F] ">
+        <div>
+            <img src="./photos/lawlogo1.png" alt="">
+        </div>
+        <div class=" hidden md:hidden lg:block">
+            <ul class="flex justify-between lg:gap-10 text-[#616161]">
+                <li class="hover:border-b-1"><a href="#">Home</a></li>
+                <li  class="hover:border-b-1"><a href="#">About Us</a></li>
+                <li  class="hover:border-b-1"><a href="#">Practise Area</a></li>
+                <li  class="hover:border-b-1 hover:border-b-[#616161]"><a href="#">Case Studies</a></li>
+            </ul>
+        </div>
+        <span class=" block lg:hidden" onclick="toggle()">
+            <i class="fa-solid fa-bars"></i>
+        </span>
+        <div class="hidden lg:block"><a href="./signin.html"><button class="px-10 py-4 rounded-lg cursor-pointer bg-[#2A446F] text-white border-2 border-transparent hover:bg-white hover:text-[#2A446F] hover:border-[#2A446F] transition-all duration-300 shadow-[0_10px_30px_rgba(42,68,111,0.5)]">Sign in</button></a>
+        </div>
+    </div>
+
+    <div id="sidebar" class="w-50 h-full bg-[#2A446F] fixed top-0 right-0 translate-x-full duration-200 " >
+        <div class=" flex justify-between items-center px-5 py-4 border-b-2 text-white" >
+            <p>Menu</p>
+            <span onclick="toggle()">
+            <i class="fa-solid fa-circle-xmark cursor-pointer" ></i>
+            </span>
+        </div>
+        <div class="border-b-2 text-white">
+              <ul class="flex-col flex gap-10 px-5 py-5 text-white">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Practise Area</a></li>
+                <li><a href="#">Case Studies</a></li>
+            </ul>
+        </div>
+        <div class=" lg:hidden mt-5 mx-5"><a href="./signup.html"><button class="px-10 py-4 rounded-lg cursor-pointer bg-[#2A446F] text-white border-2 border-white ">Sign in</a></button>
+        </div>
+    </div>
+
+    <div class="second-section flex justify-around items-center py-4  md:py-8 lg:py-15 px-3 lg:px-10 flex-wrap gap-10">
+        <div class="h-60vh hover:translate-x-5 transition-all duration-300">
+            <img src="./photos/Union.png" alt="">
+        </div>
+        <div>
+            <h1 class="font-semibold text-3xl md:text-5xl lg:text-6xl text-[#2A446F] pb-5 lg:pb-10">Trusted Legal <br> Solution For Your <br> Future</h1>
+            <h2 class="font-medium text-md md:text-2xl lg:text-2xl">Expertise that Runs Deep, <br> Service that's Personal</h2>
+            <button class="mt-10 px-10 py-5 rounded-md text-white cursor-pointer bg-[#2A446F] hover:bg-white text-white hover:text-[#2A446F] border-2 border-transparent  hover:border-[#2A446F] transition-all duration-300 shadow-[0_10px_30px_rgba(42,68,111,1)]"><a href="./create account.html">Let’s Discuss Your Case</a></button>
+        </div>
+    </div>
+    <div class="third-section bg-[#F2F2F2] py-15 px-3 lg:px-15 flex justify-around items-center flex-wrap gap-10">
+        <div class="h-60vh hover:translate-x-5 transition-all duration-300">
+            <img src="./photos/Group 1.png" alt="">
+        </div>
+        <div>
+            <h1 class="font-semibold text-2xl  md:text-4xl lg:text-5xl text-[#2A446F] pb-5 lg:pb-10">Have you been charged <br> with a crime in NYC</h1>
+            <p class="text-justify text-[11px] sm:text-xs md:text-lg lg:text-xl text-[#616161]">Welcome to Legal Sphere- Your reliable legal partner <br> to confidently navigate your legal challenges. With a <br> committed team of experts, we offer cutting-edge <br> legal solutions tailored to protect your interests and <br> ensure the success of our clients.</p>
+        </div>
+    </div>
+
+    <div class="cards-section px-8 lg:px-15 py-5 md:py-10 lg:py-15">
+        <h1 class="font-semibold  text-center text-xl md:text-4xl lg:text-3xl text-[#2A446F] pb-7 md:pb-5 lg:pb-10">Why Choose Us</h1>
+        <div class="flex md:justify-center lg:justify-between flex-wrap lg:flex-nowrap  gap-10">
+            <div class="border-1 rounded-lg p-4 shadow-[0_10px_30px_rgba(42,68,111,1)] cursor-pointer hover:translate-y-2  transition-all duration-300 hover:bg-[#2A446F] hover:text-white hover:border-none">
+                <img src="./photos/img.png" alt="">
+                    <h1 class=" text-2xl sm:text-3xl pt-5 ">Deep Expertise</h1>
+                    <p class="text-[8px] sm:text-sm md:text-md pt-5">Our team comprises seasoned legal professionals with expertise <br> in various fields, ready to provide profound legal insights for <br> every case</p>
+            </div>
+            <div class="border-1 rounded-lg p-4 shadow-[0_10px_30px_rgba(42,68,111,1)] cursor-pointer hover:translate-y-2  transition-all duration-300  hover:bg-[#2A446F] hover:text-white hover:border-none">
+                <img src="./photos/img (1).png" alt="">
+                <h1 class=" text-2xl sm:text-3xl pt-5 ">Personalized Service</h1>
+                <p class="text-[8px] sm:text-sm md:text-md lg:text-md pt-5">We understand that each client has unique needs. We offer <br> personal service and solutions customized to your specific <br>requirements</p>
+            </div>
+            <div class="border-1 rounded-lg p-4 shadow-[0_10px_30px_rgba(42,68,111,1)] cursor-pointer hover:translate-y-3 transition-all duration-300  hover:bg-[#2A446F] hover:text-white hover:border-none">
+                <img src="./photos/img (2).png" alt="">
+                <h1 class=" text-2xl sm:text-3xl pt-5 ">Integrity and Ethics</h1>
+                <p class="text-[8px] sm:text-sm md:text-md lg:text-md pt-5">We uphold high standards of integrity and ethics, ensuring that <br> every step taken by our firm aligns with legal norms and <br>regulations</p>
+            </div>
+        </div>
+    </div>
+    <div class="fifth-section py-5 md:py-10 lg:py-15 px-20 bg-[#2A446F]">
+        <h1  class="font-medium  text-center text-2xl md:text-4xl lg:text-3xl text-white pb-3 lg:pb-10" >Our Practice Area</h1>
+        <div class="flex items-center justify-center md:justify-center lg:justify-between py-4 md:py-7 lg:py-10 px-5 text-center flex-wrap gap-10">
+            <div>
+                <div class="flex justify-center">
+                    <img src="./photos/carbon_pedestrian-family.png" alt="">
+                </div>
+                <h1 class="text-white text-xl py-6">Family Law</h1>
+                <p class="text-white font-thin text-[8px] sm:text-[10px] md:text-md lg:text-base">Navigating the complexities of divorce, child <br> custody, and spousal support</p>
+            </div>
+            <div>
+                <div class="flex justify-center">
+                     <img src="./photos/mdi_account-injury.png" alt="">
+                </div>
+                <h1 class="text-white text-xl py-6">Personal Injury</h1>
+                <p class="text-white font-thin text-[9px] sm:text-[10px] md:text-md lg:text-base">Securing compensation for injuries resulting <br> from someonelses negligence</p>
+            </div>
+            <div>
+                <div class="flex justify-center">
+                      <img src="./photos/mdi_handcuffs.png" alt="">
+                </div>
+                <h1 class="text-white text-xl py-6">Real Estate Law</h1>
+                <p class="text-white font-thin text-[9px] sm:text-[10px] md:text-md lg:text-base">Residential and commercial property <br> transaction & landlord-tenent disputes</p>
+            </div>
+        </div>
+        <div class=" mt-10 flex items-center justify-center md:justify-center lg:justify-between py-4 md:py-7 lg:py-10 px-5 text-center flex-wrap gap-10">
+            <div>
+                <div class="flex justify-center">
+                    <img src="./photos/mdi_handcuffs (1).png" alt="">
+                </div>
+                <h1 class="text-white text-xl py-6">Estate Planning</h1>
+                <p class="text-white font-thin text-[9px] sm:text-[10px] md:text-md lg:text-base">Protecting your legacy and ensuring your <br> loved ones are taken care of</p>
+            </div>
+            <div>
+                <div class="flex justify-center">
+                     <img src="./photos/mdi_handcuffs (2).png" alt="">
+                </div>
+                <h1 class="text-white text-xl py-6">Criminal Defense</h1>
+                <p class="text-white font-thin text-[9px] sm:text-[10px] md:text-md lg:text-base">Vigorously defending your rights in the face <br> of criminal charges</p>
+            </div>
+            <div>
+                <div class="flex justify-center">
+                      <img src="./photos/mdi_handcuffs (3).png" alt="">
+                </div>
+                <h1 class="text-white text-xl py-6">Business Law</h1>
+                <p class="text-white font-thin text-[9px] sm:text-[10px] md:text-md lg:text-base">Assisting business, from startups to <br> established companies, in all legal matters</p>
+            </div>
+        </div>
+    </div>
+    <div class="px-15 py-15 flex justify-center md:justify-center lg:justify-around flex-wrap gap-15">
+            <div class=" lg:border-b-none border-r-none md:border-r-none lg:border-r-2  lg:border-r-[#2A446F] px-14">
+                <h1 class="text-5xl font-medium text-[#2A446F]">1500+</h1>
+                <p class="pt-7 text-[#616161] text-center text-sm">Happy Clients</p>
+            </div>
+            <div class="  border-r-0 lg:border-r-2  lg:border-r-[#2A446F] px-14">
+                <h1 class="text-5xl font-medium text-[#2A446F]">150+</h1>
+                <p class="pt-7 text-[#616161] text-center text-sm">Attorneys</p>
+            </div>
+            <div class="  border-r-0 lg:border-r-2  lg:border-r-[#2A446F] px-14">
+                <h1 class="text-5xl font-medium text-[#2A446F]">2000+</h1>
+                <p class="pt-7 text-[#616161] text-center text-sm">Practice Areas</p>
+            </div>
+            <div class="px-14">
+                <h1 class="text-5xl font-medium text-[#2A446F]">500+</h1>
+                <p class="pt-7 text-[#616161] text-center text-sm">Case Dismiss</p>
+            </div>
+       </div> 
+    </div>
+    <div class="bg-[#F2F2F2] py-5 md:py-15 px-3 lg:px-15">
+        <h1 class="font-medium  text-center text-lg sm:text-2xl md:text-4xl lg:text-3xl text-[#2A446F] pb-5 lg:pb-10">Our Goals & Achievements <br> in Legal Practice</h1>
+        <p class="text-[#616161] font-medium text-[6px] sm:text-[14px] md:text-sm lg:text-md flex justify-center text-center">Whether you're a business owner, an individual facing legal challenges, or a family <br> seeking guidance, Legal Sphere is dedicated to securing the best possible outcome for <br> you.</p>
+        <div class="w-full aspect-video flex justify-center mt-15 rounded-lg">
+            <iframe width="966" height="543" src="https://www.youtube.com/embed/aK2PVtgWLp8" title="Lawyer Career Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="bg-[#2A446F] px-4 md:px-10 lg:px-15  py-15" >
+        <div class="flex justify-between gap-10 flex-wrap">
+                <h1 class="text-white font-sm md:font-medium text-lg sm:text-xl md:text-3xl lg:text-4xl">Popular Case Studies</h1>
+                <p class="text-[#FFFFFF] font-thin text-[8px] sm:text-2xl md:text-lg lg:text-xl" >These case studies involve a detailed exploration of specific legal issues,<br> the facts surrounding them, the arguments presented by each party,<br> and the ultimate resolution or court decision.</p>
+        </div>
+        <div class=" mt-15 md:mt-30 flex gap-20  flex-wrap ">
+            <div class="h-60vh">
+                <img src="./photos/Rectangle 10.png" alt="">
+            </div>
+            <div>
+                <div class="flex items-center gap-5 text-white font-thin text-xs pt-5">
+                <h4>20th January, 2024</h4>
+                <span>:</span>
+                <h4>Family Law</h4>
+                </div>
+                <h1 class="text-white font-medium text-xl sm:text-3xl md:text-4xl pt-10">The Thompson Custody</h1>
+                <p class="text-white text-xs sm:text-sm md:text-medium lg:text-lg font-thin pt-10">Thompson family found themselves entangled in a <br> familial discord that led to a high-stakes legal battle over <br> custody. Mark Thompson, a successful architect, and <br> Emily Thompson, a renowned pediatrician, decided to <br>part ways after 15 years of marriage.</p>
+                <div class="flex fixed right-10 ">
+                    <img src="./photos/Component 1.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class=" flex justify-end border-b-1 border-b-[#BDBDBD] cursor-pointer">
+            <img src="./photos/Component 1.png" alt="">
+        </div>
+
+        <div class="mt-10 flex gap-20  flex-wrap">
+            <div class="h-60vh">
+                 <img src="./photos/Rectangle 10 (1).png" alt="">
+            </div>
+            <div>
+                <div class="flex items-center gap-5 text-white font-thin text-xs pt-5">
+                    <h4>16th January,2024</h4>
+                    <span>:</span>
+                    <h4>Copyright law in the context of AI-generated art</h4>
+                </div>
+                <h1 class="text-white font-medium text-xl sm:text-3xl md:text-4xl pt-10">AI Art Authorship Ambiguity</h1>
+                <p class="text-white text-xs sm:text-sm md:text-medium lg:text-lg font-thin pt-10">Clara discovers her unique artistic style being used to <br> generate new images and sold commercially by an AI <br> platform. She claims copyright infringement and <br> demands compensation.</p>
+                 <div class="flex fixed right-10">
+                    <img src="./photos/Component 1.png" alt="">
+                </div>
+             </div>
+        </div>
+        <div class=" flex justify-end border-b-1 border-b-[#BDBDBD] cursor-pointer">
+             <img src="./photos/Component 1.png" alt="">
+        </div>
+    </div>
+
+<div class="swiper-section px-15 py-5 md:py-15 ">
+    <h1 class=" flex justify-center md:justify-start ">Testimonials</h1>
+    <h1 class="font-medium flex justify-center md:justify-start text-xl sm:text-2xl md:text-4xl lg:text-5xl text-[#2A446F] pt-3 pb-5 lg:pb-10">What Our Clients Say</h1>
+    <div class="flex gap-20 md:gap-40 items-center flex-wrap md:flex-nowrap">
+        <div class="px-10">
+            <div class="flex gap-5 items-center">
+                <img src="./photos/syedmurtaza.png" alt="">
+                <div>
+                    <h1 class="text-[10px] sm:text-xl">Syed Murtaza</h1>
+                    <h1 class="text-[#616161] text-[6px] md:text-xl">Business Law Client</h1>
+                </div>
+            </div>
+            <div class="flex gap-5 items-center my-12">
+                <img src="./photos/Rectangle 11.png" alt="">
+                <div>
+                    <h1 class="text-[10px] sm:text-xl">Sana Khan</h1>
+                    <h1 class="text-[#616161] text-[10px] md:text-lg">Divorce Client</h1>
+                </div>
+            </div>
+            <div class="flex gap-5 items-center">
+                <img src="./photos/amna.png" alt="">
+                <div>
+                    <h1 class="text-[10px] sm:text-xl">Amna</h1>
+                    <h1 class="text-[#616161] text-[6px] md:text-lg">Intellectual Property Client</h1>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="flex gap-5 md:gap-10 items-center flex-wrap">
+                <h1 class="text-[#616161] text-[15px] sm:text-2xl md:text-2xl">Overcoming Adversity in Family Law</h1>
+                <div class="flex items-center  text-[#D2AB2D] text-sm sm:text-md md:text-lg">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span class="text-[#D9D9D9] flex items-center"><i class="fa-solid fa-star"></i></span>
+                </div>
+            </div>
+            <div class="mt-5">
+                <p class="text-[#616161] text-[7px] sm:text-lg">Going through a divorce was the toughest time of my life. I felt lost and <br> overwhelmed, but Legal Sphere stood by me every step of the way. Their team was <br> compassionate, understanding, and incredibly knowledgeable. Thanks to their <br> expertise and dedication, I achieved a fair settlement that protected my financial <br> future and allowed me to focus on healing and rebuilding my life.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<footer class=" py-15 px-15 bg-cover bg-center bg-[linear-gradient(to_right,#2A446FEE,#2A446FAA),url('/photos/footer.jpg')]">
+        <div>
+            <img src="./photos/Logo.png" alt="">
+        </div>
+        <div class="flex gap-7 md:gap-20 items-center text-white mt-10 flex-wrap md:flex-nowrap">
+            <div class="flex gap-3 items-center text-2xl">
+                <i class="fa-solid fa-location-dot text-[#BDBDBD]"></i>
+                <h1 class=" text-sm sm:text-md md:text-xl">Kohat University Of  Science & <br> Technology KUST .</h1>
+            </div>
+            <div>
+                <h4>Free Consultation</h4>
+                <h1 class="text-[#D2AB2D] text-3xl">+92-3456222360</h1>
+            </div>
+            <button class="border-1 border-[#D2AB2D] text-[#D2AB2D] px-8 py-4 hover:bg-[#D2AB2D] hover:text-black cursor-pointer rounded-sm ">Get Direction</button>
+        </div>
+</footer>
+
+
+</body>
+</html>
+
+
+<!-- JAVA SCRIPT -->
+
+<script>
+    toggle = () =>
+        {
+            document.getElementById("sidebar").classList.toggle("translate-x-full")
+        }
+</script>
+
+<!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+
+
